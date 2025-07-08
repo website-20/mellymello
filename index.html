@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melly Mello - Restaurant Gastronomique à Lomé, Togo</title>
+    
+    <!-- Favicon (logo de l'onglet) -->
+    <link rel="icon" href="WhatsApp Image 2025-07-08 à 15.51.53_e75254ee.jpg" type="image/jpeg">
+    
+    <!-- Logo de l'entreprise (pour référence) -->
+    <link rel="apple-touch-icon" href="logo.pdf">
+    
+    <meta name="description" content="Restaurant Melly Mello à Lomé - Découvrez une cuisine togolaise authentique et raffinée dans une ambiance chaleureuse.">
+    <meta name="keywords" content="restaurant, Lomé, Togo, cuisine togolaise, Melly Mello, pifion, attieke, ayimolou">
+    <meta name="author" content="Melly Mello">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Melly Mello - Restaurant Gastronomique à Lomé">
+    <meta property="og:description" content="Découvrez une cuisine togolaise authentique et raffinée dans une ambiance chaleureuse.">
+    <meta property="og:image" content="https://example.com/path-to-your-image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* [Tous les styles CSS précédents restent inchangés] */
+        /* ... */
+    </style>
+</head>
+<body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/22893999667?text=Bonjour%20Melly%20Mello,%20je%20voudrais%20passer%20une%20commande" class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header>
+        <nav class="container">
+            <!-- Logo de l'entreprise -->
+            <div class="logo">
+                <img src="logo.pdf" alt="Melly Mello Logo" style="height: 60px;">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#video">Vidéo</a></li>
+                <li><a href="#commande">Commander</a></li>
+                <li><a href="#localisation">Localisation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- [Toutes les sections précédentes restent inchangées] -->
+    <!-- ... -->
+
+    <!-- Nouvelle Section Vidéo Étendue -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Notre Univers en Vidéo</h2>
+            <div class="video-container fade-in">
+                <video poster="FLYERS MELLY MELLO.png" controls>
+                    <!-- Remplacez par vos propres vidéos -->
+                    <source src="restaurant-video.mp4" type="video/mp4">
+                    <source src="restaurant-video.webm" type="video/webm">
+                    Votre navigateur ne supporte pas les vidéos HTML5.
+                </video>
+                <div class="video-overlay">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Galerie de mini-vidéos -->
+            <div class="video-gallery" style="margin-top: 4rem;">
+                <h3 style="text-align: center; margin-bottom: 2rem; color: #f39c12;">Découvrez nos spécialités</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="video-thumbnail">
+                        <video poster="KAKEMONO MELLY MELLO.png" controls style="width: 100%; border-radius: 10px;">
+                            <source src="specialite1.mp4" type="video/mp4">
+                        </video>
+                        <h4 style="margin-top: 1rem; text-align: center;">Préparation du Pifion</h4>
+                    </div>
+                    <div class="video-thumbnail">
+                        <video poster="WhatsApp Image 2025-07-08 à 15.52.30_a0e4e2b7.jpg" controls style="width: 100%; border-radius: 10px;">
+                            <source src="specialite2.mp4" type="video/mp4">
+                        </video>
+                        <h4 style="margin-top: 1rem; text-align: center;">Notre Ayimolou maison</h4>
+                    </div>
+                    <div class="video-thumbnail">
+                        <video poster="FLYERS MELLY MELLO.png" controls style="width: 100%; border-radius: 10px;">
+                            <source src="specialite3.mp4" type="video/mp4">
+                        </video>
+                        <h4 style="margin-top: 1rem; text-align: center;">Ambiance du restaurant</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [Les autres sections restent inchangées] -->
+    <!-- ... -->
+
+    <script>
+        // Animation au défilement
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(el => observer.observe(el));
+            
+            // Gestion de la vidéo principale
+            const videoContainer = document.querySelector('.video-container');
+            const video = videoContainer.querySelector('video');
+            const playButton = videoContainer.querySelector('.play-button');
+            
+            playButton.addEventListener('click', function() {
+                video.play();
+                videoContainer.querySelector('.video-overlay').style.opacity = '0';
+            });
+            
+            video.addEventListener('click', function() {
+                if (video.paused) {
+                    video.play();
+                    videoContainer.querySelector('.video-overlay').style.opacity = '0';
+                } else {
+                    video.pause();
+                    videoContainer.querySelector('.video-overlay').style.opacity = '1';
+                }
+            });
+            
+            // Chargement progressif des images
+            const lazyLoad = target => {
+                const io = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            const src = img.getAttribute('data-src');
+                            
+                            img.setAttribute('src', src);
+                            img.classList.add('fade-in');
+                            observer.disconnect();
+                        }
+                    });
+                });
+                
+                io.observe(target);
+            };
+            
+            const images = document.querySelectorAll('img[data-src]');
+            images.forEach(lazyLoad);
+        });
+    </script>
+</body>
+</html>
